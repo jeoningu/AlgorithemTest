@@ -1,7 +1,6 @@
 package com.study;
 
-import com.study.programers.lv1.PersonalInformationCollectionValidityPeriod;
-import com.study.programers.lv1.SmallSubstring;
+import com.study.programers.lv1.*;
 
 import java.util.Arrays;
 
@@ -16,5 +15,18 @@ public class Main {
 //                new String[]{"A 6", "B 12", "C 3"},
 //                new String[]{"2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"});
 //        System.out.println("Arrays.toString(result) = " + Arrays.toString(result));
+
+//        SumOfDivisors solution = new SumOfDivisors();
+//        int result = solution.solution(12);
+//        System.out.println("result = " + result);
+
+//        EvenAndOddNumbers solution = new EvenAndOddNumbers();
+//        String result = solution.solution(3);
+//        System.out.println("result = " + result);
+
+//        MeanSaving solution = new MeanSaving();
+//        double result = solution.solution(new int[]{1,2,3,4});
+//        System.out.println("result = " + result);
+
     }
 }
