@@ -1,0 +1,49 @@
+참고
+https://yoongrammer.tistory.com/79
+https://pizzasheepsdev.tistory.com/3
+
+
+[시간 복잡도]
+ - 시간 복잡도는 일반적으로 최악의 경우를 나타내는 빅오 표기법을 사용합니다.
+ - 빅오 표기법은 연산횟수를 다항식으로 표현하여 최고차항의 계수를 제외시켜 나타내기 때문에 반복문의 반복 횟수를 계산하면 됩니다.
+ - 연산 횟수는 데이터입출력(copy,move),산술연산(add,multiply),제어연산(if,while,for)이 있습니다.
+ - 빅오표기법으로 간단하게 계산하는 방법의 핵심은 반복문의 반복횟수를 계산하면 된다는 것입니다. 아래 예시를 보면 알 수 있습니다.
+
+
+int func (int n) {
+  int sum = 0;     // 대입연산 1회
+  int i = 0;       // 대입연산 1회
+
+  for(i=0; i < n; i++) {  // 반복문 n+1회
+    sum += i;             // 덧셈 연산 n회
+  }
+  for(i=0; i < n; i++) {  // 반복문 n+1회
+    sum += i;             // 덧셈 연산 n회
+  }
+  return sum;       // 리턴 1회
+}
+4n+5
+최고차항은 N이기 떄문에
+시간 복잡도는 O(N) 입니다.
+
+
+int func (int n) {
+  int sum = 0;     // 대입연산 1회
+  int i = 0;       // 대입연산 1회
+
+  for(i=0; i < n; i++) {  // 반복문 n+1회
+    sum += i;             // 덧셈 연산 n회
+     for(i=0; i < n; i++) {  // 반복문 n+1회
+        sum += i;            // 덧셈 연산 n회
+        System.out.println(sum); // 출력연산 n회
+     }
+  }
+  return sum;       // 리턴 1회
+}
+(n+1+n) * (n+1+n+n) + 3
+= 6n²+.....
+시간 복잡도는 O(n²) 입니다.
+
+
+
+
