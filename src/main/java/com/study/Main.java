@@ -28,5 +28,12 @@ public class Main {
 //        double result = solution.solution(new int[]{1,2,3,4});
 //        System.out.println("result = " + result);
 
+//        DigitAddition solution = new DigitAddition();
+//        int result = solution.solution(987);
+//        System.out.println("result = " + result);
+
+        TurningNaturalNumbersIntoArrays solution = new TurningNaturalNumbersIntoArrays();
+        int[] result = solution.solution(12345);
+        System.out.println("result = " + result);
     }
 }
