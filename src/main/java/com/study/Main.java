@@ -1,6 +1,7 @@
 package com.study;
 
 import com.study.programers.lv1.*;
+import com.study.programers.해시.PhoneNumbers;
 
 import java.util.Arrays;
 
@@ -45,8 +46,14 @@ public class Main {
 //        long result = solution.solution(121);
 //        System.out.println("result = " + result);
 
-        NNumbersSpacedByX solution = new NNumbersSpacedByX();
-        long[] result = solution.solution(2, 5);
-        System.out.println(Arrays.toString(result));
+//        NNumbersSpacedByX solution = new NNumbersSpacedByX();
+//        long[] result = solution.solution(2, 5);
+//        System.out.println(Arrays.toString(result));
+
+        PhoneNumbers solution = new PhoneNumbers();
+        String[] phone_book = new String[]{"12","123","1235","567","88","119", "97674223", "1195524421","456","789"};
+        boolean result = solution.solution(phone_book);
+        System.out.println(result);
+
     }
 }
