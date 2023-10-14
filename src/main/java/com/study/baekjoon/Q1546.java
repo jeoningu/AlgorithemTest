@@ -1,6 +1,5 @@
 package com.study.baekjoon;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Q1546 {
