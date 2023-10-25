@@ -1,0 +1,18 @@
+백준  Q11659
+
+=== N 크기의 배열이 있을 때 특정 구간 합 구하기 ===
+
+[팁]
+1. N+1 배열 선언
+long sumArray[] = new long[N+1];
+
+2. 0번 idx에 0 지정
+sumArray[0] = 0;
+
+3. 구간합 구하기
+for (int i=1; i<N+1; i++) {
+    sumArray[i] = sumArray[i-1] + 입력값
+}
+
+4. 구간합 배열을 이용해서 startIdx에서 endIdx까지의 합 구하기
+System.out.println(sumArray[endIdx] - sumArray[startIdx-1]);
