@@ -1,11 +1,15 @@
 package com.study.baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class 투포인터_Q1940 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+/*        Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
 
@@ -32,6 +36,33 @@ public class 투포인터_Q1940 {
 
             }
         }
-        System.out.println(cnt);
+        System.out.println(cnt);*/
+
+        // ===============
+        // 공개 코드
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        int M = Integer.parseInt(br.readLine());
+        int[] arr = new int[N];
+
+        StringTokenizer sc = new StringTokenizer(br.readLine());
+        for(int i=0; i<N; i++) {
+            arr[i] = Integer.parseInt(sc.nextToken());
+        }
+
+        Arrays.sort(arr);
+        int count = 0;
+        int i = 0; //arr[0] // min
+        int j = N-1; // arr[N-1] //max
+        while(i<j) {
+            if (arr[i]+arr[j] < M) i++;
+            else if (arr[i]+arr[j] > M) j--;
+            else {
+                count++;
+                i++; j--;
+            }
+        }
+        System.out.println(count);
+
     }
 }
